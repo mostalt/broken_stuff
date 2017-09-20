@@ -1,7 +1,8 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Светлана](https://up.htmlacademy.ru/adaptive/12/user/216789).
-* Наставник: `Неизвестно`.
+* Наставник:
+[Лиза Позднякова](https://htmlacademy.ru/profile/lizzy).
 
 ---
 

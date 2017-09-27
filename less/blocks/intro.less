@@ -6,3 +6,68 @@
   background-repeat: no-repeat;
   outline: 1px solid red;
 }
+
+.intro--index {
+  position: relative;
+  min-height: 450px;
+}
+
+.intro--index::after {
+  content: " ";
+  position: absolute;
+  top: 175px;
+  left: 30px;
+  width: 258px;
+  height: 286px;
+  background-image: url("../../img/iphone-hand-mobile@1x.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.intro__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.intro__wrapper--index {
+  padding-top: 500px;
+  padding-bottom: 30px;
+}
+
+.intro__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.intro__item {
+  display: block;
+  width: 60px;
+  height: 60px;
+  //margin-right: 0px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  //outline: 1px solid white;
+}
+
+.intro__item--apple {
+  background-image: url("../../img/logo-apple.svg");
+}
+
+.intro__item--android {
+  background-image: url("../../img/logo-android.svg");
+}
+
+.intro__item--windows {
+  //margin-right: 0;
+  background-image: url("../../img/logo-microsoft.svg");
+}
+
+.intro__text {
+  font-family: @font-open-sans-light;
+  font-size: 14px;
+  line-height: 24px;
+  color: @secondary-text-color;
+  text-align: center;
+  letter-spacing: 1.4px;
+}

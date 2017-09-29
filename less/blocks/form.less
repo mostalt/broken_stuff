@@ -80,7 +80,15 @@ input[type="checkbox"]:checked + .form__checkbox::before {
   padding-bottom: 20px;
 }
 
-.form__item--contacts input[type="tel"],
+.form__item--contacts input[type="tel"] {
+  width: 280px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid @border-color;
+}
+
 .form__item--contacts input[type="email"] {
   width: 280px;
   margin-top: 5px;
@@ -90,8 +98,20 @@ input[type="checkbox"]:checked + .form__checkbox::before {
   border: 2px solid @border-color;
 }
 
-.form__item--fio input[type="text"]::-webkit-input-placeholder,
-.form__item--contacts input[type="tel"]::-webkit-input-placeholder,
+.form__item--fio input[type="text"]::-webkit-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__item--contacts input[type="tel"]::-webkit-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
 .form__item--contacts input[type="email"]::-webkit-input-placeholder {
   font-family: @font-open-sans;
   font-size: 18px;
@@ -99,8 +119,20 @@ input[type="checkbox"]:checked + .form__checkbox::before {
   color: @main-text-color;
 }
 
-.form__item--fio input[type="text"]::-moz-placeholder,
-.form__item--contacts input[type="tel"]::-moz-placeholder,
+.form__item--fio input[type="text"]::-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__item--contacts input[type="tel"]::-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
 .form__item--contacts input[type="email"]::-moz-placeholder {
   font-family: @font-open-sans;
   font-size: 18px;
@@ -108,8 +140,20 @@ input[type="checkbox"]:checked + .form__checkbox::before {
   color: @main-text-color;
 }
 
-.form__item--fio input[type="text"]:-moz-placeholder,
-.form__item--contacts input[type="tel"]:-moz-placeholder,
+.form__item--fio input[type="text"]:-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__item--contacts input[type="tel"]:-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
 .form__item--contacts input[type="email"]:-moz-placeholder {
   font-family: @font-open-sans;
   font-size: 18px;
@@ -117,8 +161,20 @@ input[type="checkbox"]:checked + .form__checkbox::before {
   color: @main-text-color;
 }
 
-.form__item--fio input[type="text"]:-ms-input-placeholder,
-.form__item--contacts input[type="tel"]:-ms-input-placeholder,
+.form__item--fio input[type="text"]:-ms-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__item--contacts input[type="tel"]:-ms-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
 .form__item--contacts input[type="email"]:-ms-input-placeholder {
   font-family: @font-open-sans;
   font-size: 18px;

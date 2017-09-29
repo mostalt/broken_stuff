@@ -4,6 +4,142 @@
 
 .form__item {
   outline: 1px solid green;
+
+  &--fio {
+    padding-bottom: 20px;
+  }
+
+  &--fio input[type="text"] {
+    width: 280px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid @border-color;
+  }
+
+  &--fio input[type="text"]::-webkit-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--fio input[type="text"]::-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--fio input[type="text"]:-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--fio input[type="text"]:-ms-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+}
+
+  &--checkbox {
+    padding-top: 40px;
+    background-color: @secondary-bg-color;
+  }
+
+  &--contacts {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  &--contacts input[type="tel"] {
+    width: 280px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid @border-color;
+  }
+
+  &--contacts input[type="tel"]::-webkit-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--contacts input[type="tel"]::-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--contacts input[type="tel"]:-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--contacts input[type="tel"]:-ms-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--contacts input[type="email"] {
+    width: 280px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid @border-color;
+  }
+
+  &--contacts input[type="email"]::-webkit-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--contacts input[type="email"]::-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--contacts input[type="email"]:-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--contacts input[type="email"]:-ms-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
+
+  &--app {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: @secondary-bg-color;
+  }
+
+  &--textarea {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .form__text {
@@ -13,24 +149,6 @@
   line-height: 30px;
   color: @main-color;
   text-transform: uppercase;
-}
-
-.form__item--fio {
-  padding-bottom: 20px;
-}
-
-.form__item--fio input[type="text"] {
-  width: 280px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 2px solid @border-color;
-}
-
-.form__item--checkbox {
-  padding-top: 40px;
-  background-color: @secondary-bg-color;
 }
 
 .form__title {
@@ -55,137 +173,24 @@
   font-size: 18px;
   line-height: 30px;
   color: @main-text-color;
-}
 
-.form__checkbox::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 35px;
-  height: 35px;
-  background-color: @main-bg-color;
-  border: 2px solid @border-color;
-  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: @main-bg-color;
+    border: 2px solid @border-color;
+    cursor: pointer;
+  }
 }
 
 input[type="checkbox"]:checked + .form__checkbox::before {
-  background-image: url("..//img/icon-yes.svg");
+  background-image: url("../img/icon-yes.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
-}
-
-.form__item--contacts {
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-
-.form__item--contacts input[type="tel"] {
-  width: 280px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 2px solid @border-color;
-}
-
-.form__item--contacts input[type="email"] {
-  width: 280px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 2px solid @border-color;
-}
-
-.form__item--fio input[type="text"]::-webkit-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="tel"]::-webkit-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="email"]::-webkit-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--fio input[type="text"]::-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="tel"]::-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="email"]::-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--fio input[type="text"]:-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="tel"]:-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="email"]:-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--fio input[type="text"]:-ms-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="tel"]:-ms-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--contacts input[type="email"]:-ms-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
-
-.form__item--app {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  background-color: @secondary-bg-color;
 }
 
 .form__radio {
@@ -198,30 +203,25 @@ input[type="checkbox"]:checked + .form__checkbox::before {
   font-size: 18px;
   line-height: 30px;
   color: @main-text-color;
-}
 
-.form__radio::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 35px;
-  height: 35px;
-  background-color: @main-bg-color;
-  border: 2px solid @border-color;
-  border-radius: 50%;
-  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: @main-bg-color;
+    border: 2px solid @border-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
 input[type="radio"]:checked + .form__radio::before {
-  background-image: url("..//img/icon-map-marker.svg");
+  background-image: url("../img/icon-map-marker.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
-}
-
-.form__item--textarea {
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .form__textarea {
@@ -230,34 +230,34 @@ input[type="radio"]:checked + .form__radio::before {
   padding: 20px;
   box-sizing: border-box;
   border: 2px solid @border-color;
-}
 
-.form__textarea::-webkit-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
+  &::-webkit-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
 
-.form__textarea::-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
+  &::-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
 
-.form__textarea:-moz-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
-}
+  &:-moz-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
 
-.form__textarea:-ms-input-placeholder {
-  font-family: @font-open-sans;
-  font-size: 18px;
-  line-height: 30px;
-  color: @main-text-color;
+  &:-ms-input-placeholder {
+    font-family: @font-open-sans;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
+  }
 }
 
 .form__inner {

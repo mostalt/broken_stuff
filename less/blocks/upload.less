@@ -36,18 +36,18 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}
 
-.upload__toggle--crop {
-  background-image: url("..//img/icon-editor-crop.svg");
-}
+  &--crop {
+    background-image: url("../img/icon-editor-crop.svg");
+  }
 
-.upload__toggle--fill {
-  background-image: url("..//img/icon-editor-fill.svg");
-}
+  &--fill {
+    background-image: url("../img/icon-editor-fill.svg");
+  }
 
-.upload__toggle--contrast {
-  background-image: url("..//img/icon-editor-contrast.svg");
+  &--contrast {
+    background-image: url("../img/icon-editor-contrast.svg");
+  }
 }
 
 .upload__btn {
@@ -55,14 +55,15 @@
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: transparent;
-}
+  cursor: pointer;
 
-.upload__btn--post {
-  color: @main-color;
-  border-color: @main-color;
-}
+  &--post {
+    color: @main-color;
+    border-color: @main-color;
+  }
 
-.upload__btn--cancel {
-  color: #e3e4e4;
-  border-color: #dddfe0;
+  &--cancel {
+    color: #e3e4e4;
+    border-color: #dddfe0;
+  }
 }

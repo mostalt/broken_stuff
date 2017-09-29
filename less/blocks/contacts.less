@@ -1,5 +1,4 @@
 .contacts {
-  position: relative;
   background-color: @main-bg-color;
   text-align: center;
 }
@@ -32,8 +31,9 @@
 }
 
 .contacts__map {
-  position: absolute;
-  top: 160px;
-  left: 0;
-  z-index: -5;
+  height: 200px;
+  background-color: @secondary-bg-color;
+  background-image: url("..//img/icon-map-marker.svg"), url("..//img/bg-map-mobile@1x.png");
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: no-repeat, no-repeat;
 }

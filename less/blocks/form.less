@@ -19,12 +19,13 @@
   padding-bottom: 20px;
 }
 
-.form__item--fio input {
+.form__item--fio input[type="text"] {
   width: 280px;
   margin-top: 5px;
   margin-bottom: 20px;
   padding: 20px;
   box-sizing: border-box;
+  border: 2px solid @border-color;
 }
 
 .form__item--checkbox {
@@ -44,11 +45,8 @@
   text-align: center;
 }
 
-.form__item--checkbox input {
-  display: none;
-}
-
 .form__checkbox {
+  position: relative;
   display: block;
   padding-left: 70px;
   padding-top: 26px;
@@ -59,17 +57,73 @@
   color: @main-text-color;
 }
 
+.form__checkbox::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: @main-bg-color;
+  border: 2px solid @border-color;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .form__checkbox::before {
+  background-image: url("..//img/icon-yes.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .form__item--contacts {
   padding-top: 30px;
   padding-bottom: 20px;
 }
 
-.form__item--contacts input {
+.form__item--contacts input[type="tel"],
+.form__item--contacts input[type="email"] {
   width: 280px;
   margin-top: 5px;
   margin-bottom: 20px;
   padding: 20px;
   box-sizing: border-box;
+  border: 2px solid @border-color;
+}
+
+.form__item--fio input[type="text"]::-webkit-input-placeholder,
+.form__item--contacts input[type="tel"]::-webkit-input-placeholder,
+.form__item--contacts input[type="email"]::-webkit-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__item--fio input[type="text"]::-moz-placeholder,
+.form__item--contacts input[type="tel"]::-moz-placeholder,
+.form__item--contacts input[type="email"]::-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__item--fio input[type="text"]:-moz-placeholder,
+.form__item--contacts input[type="tel"]:-moz-placeholder,
+.form__item--contacts input[type="email"]:-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__item--fio input[type="text"]:-ms-input-placeholder,
+.form__item--contacts input[type="tel"]:-ms-input-placeholder,
+.form__item--contacts input[type="email"]:-ms-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
 }
 
 .form__item--app {
@@ -78,11 +132,8 @@
   background-color: @secondary-bg-color;
 }
 
-.form__item--app input {
-  display: none;
-}
-
 .form__radio {
+  position: relative;
   display: block;
   padding-left: 70px;
   padding-top: 26px;
@@ -91,6 +142,25 @@
   font-size: 18px;
   line-height: 30px;
   color: @main-text-color;
+}
+
+.form__radio::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: @main-bg-color;
+  border: 2px solid @border-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .form__radio::before {
+  background-image: url("..//img/icon-map-marker.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .form__item--textarea {
@@ -100,10 +170,38 @@
 
 .form__textarea {
   width: 280px;
-  height: 180px;
+  height: 200px;
   padding: 20px;
   box-sizing: border-box;
-  border: 2px solid #e5e5e5;
+  border: 2px solid @border-color;
+}
+
+.form__textarea::-webkit-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__textarea::-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__textarea:-moz-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
+}
+
+.form__textarea:-ms-input-placeholder {
+  font-family: @font-open-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
 }
 
 .form__inner {
@@ -118,6 +216,6 @@
   font-family: @font-open-sans;
   font-size: 14px;
   line-height: 30px;
-  color: @secondary-color;
+  color: @main-text-color;
   text-transform: uppercase;
 }

@@ -3,31 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Pink</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
     <!--NAVIGATION-->
 
     <header class="page-header">
-      <div class="page-header__wrapper  container">
+      <div class="page-header__wrapper">
         <h1 class="page-header__title  visually-hidden">Pink</h1>
         <a class="page-header__logo">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Pink">
+          <img src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
         </a>
-        <button class="page-header__toggle" type="button">Открыть меню</button>
         <nav class="main-nav  main-nav--opened  main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="#">Главная</a>
+              <a class="main-nav__link" href="#">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Фотографии</a>
+              <a class="main-nav__link" href="photo.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Конкурс</a>
+              <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">HTML Academy</a>
+              <a class="main-nav__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -38,12 +39,17 @@
       <!--INTRO-->
 
       <section class="intro  intro--index">
-        <div class="intro__wrapper">
+        <div class="intro__wrapper  intro__wrapper--index">
           <a class="intro__btn  btn" href="#">Скачать приложение</a>
           <div class="intro__list">
-            <a class="intro__item" href="#">Apple</a>
-            <a class="intro__item" href="#">Android</a>
-            <a class="intro__item" href="#">Windows</a>
+            <a class="intro__item  intro__item--apple" href="#">
+              <span class="visually-hidden">Apple</span>
+            </a>
+            <a class="intro__item  intro__item--android" href="#">
+              <span class="visually-hidden">Android</span>
+            </a>
+            <a class="intro__item  intro__item--windows" href="#">
+              <span class="visually-hidden">Windows</span></a>
           </div>
           <p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
@@ -52,23 +58,23 @@
       <!--INFORMATION-->
 
       <section class="information">
-        <div class="container">
-          <p class="information__text">Устали от серости мегаполиса?</p>
-          <p class="information__text">Нам есть, что вам предложить!</p>
+        <div class="information__wrapper  container">
+          <h2 class="information__title">Устали от серости мегаполиса?</h2>
+          <h2 class="information__title">Нам есть, что вам предложить!</h2>
         </div>
         <div class="advantage">
           <ul class="advantage__list  container">
             <li class="advantage__item">
-              <h2 class="advantage__title">Поднимает настроение</h2>
+              <h3 class="advantage__title">Поднимает настроение</h3>
               <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="advantage__item">
-              <h2 class="advantage__title">Меняет мир вокруг</h2>
+              <h3 class="advantage__title">Меняет мир вокруг</h3>
               <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="advantage__item">
-              <h2 class="advantage__title">Заводит новых друзей</h2>
-              <p class="advantage__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новыхы</p>
+              <h3 class="advantage__title">Заводит новых друзей</h3>
+              <p class="advantage__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
         </div>
@@ -86,15 +92,15 @@
             <label for="slide-2"></label>
             <label for="slide-3"></label>
           </div>
-          <blockquote class="reviews__slide  reviews__slider--first">
+          <blockquote class="reviews__slide  reviews__slide--first">
             <cite class="reviews__author">Николай Петров</cite>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
-          <blockquote class="reviews__slide  reviews__slider--second">
+          <blockquote class="reviews__slide  reviews__slide--second">
             <cite class="reviews__author">Николай Иванов</cite>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
-          <blockquote class="reviews__slide  reviews__slider--third">
+          <blockquote class="reviews__slide  reviews__slide--third">
             <cite class="reviews__author">Николай Сидоров</cite>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
@@ -116,15 +122,15 @@
           <thead class="price__top">
             <tr class="price__row">
               <th class="price__header  price__header--base">
-                <strong class="price__name">База</strong>
+                <p class="price__name">База</p>
                 <span class="price__value">1,99 USD</span>
               </th>
               <th class="price__header  price__header--standart">
-                <strong class="price__name">Стандарт</strong>
+                <p class="price__name">Стандарт</p>
                 <span class="price__value">3,99 USD</span>
               </th>
               <th class="price__header  price__header--unlim">
-                <strong class="price__name">Анлим</strong>
+                <p class="price__name">Анлим</p>
                 <span class="price__value">9,99 USD</span>
               </th>
             </tr>
@@ -171,25 +177,23 @@
 
       <section class="contacts">
         <div class="contacts__info  container">
-          <p class="contacts__text">Остались вопросы? Свяжитесь с нами!</p>
+          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <h2 class="contacts__title">Звоните:</h2>
+              <h3 class="contacts__text">Звоните:</h3>
               <span class="contacts__type">+7 (812) 555-66-66</span>
             </li>
             <li class="contacts__item">
-              <h2 class="contacts__title">Пишите:</h2>
+              <h3 class="contacts__text">Пишите:</h3>
               <span class="contacts__type">mail@htmlacademy.ru</span>
             </li>
             <li class="contacts__item">
-              <h2 class="contacts__title">Приезжайте в гости:</h2>
+              <h3 class="contacts__text">Приезжайте в гости:</h3>
               <span class="contacts__type">ул. Большая Конюшенная, 19/8</span>
             </li>
           </ul>
         </div>
-        <div class="contacts__map">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Расположение Pink">
-        </div>
+        <div class="contacts__map"></div>
       </section>
     </main>
 
@@ -197,16 +201,16 @@
 
     <footer class="page-footer  visually-hidden">
       <a class="page-footer__logo">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Pink">
+        <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
       </a>
       <div class="page-footer__social  social">
-        <a class="social__item" href="#">
+        <a class="social__item  social__item--tw" href="#">
           <span class="visually-hidden">Twitter></span>
         </a>
-        <a class="social__item" href="#">
+        <a class="social__item  social__item--fb" href="#">
           <span class="visually-hidden">Facebook</span>
         </a>
-        <a class="social__item" href="#">
+        <a class="social__item  social__item--yt" href="#">
           <span class="visually-hidden">Youtube</span>
         </a>
       </div>

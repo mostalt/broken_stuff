@@ -1,5 +1,9 @@
 .page-footer {
   padding-top: 40px;
+
+  &--index {
+    display: none;
+  }
 }
 
 .page-footer__logo {
@@ -29,4 +33,27 @@
   font-size: 14px;
   line-height: 18px;
   color: @main-text-color;
+}
+
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .page-footer__logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 940px;
+  }
 }

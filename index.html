@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -9,7 +10,7 @@
 
     <!--NAVIGATION-->
 
-    <header class="page-header">
+    <header class="page-header  page-header--index">
       <div class="page-header__wrapper">
         <h1 class="page-header__title  visually-hidden">Pink</h1>
         <a class="page-header__logo">
@@ -28,7 +29,7 @@
               <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">HTML Academy</a>
+              <a class="main-nav__link" href="#">HTML&nbsp;Academy</a>
             </li>
           </ul>
         </nav>
@@ -40,6 +41,7 @@
 
       <section class="intro  intro--index">
         <div class="intro__wrapper  intro__wrapper--index">
+          <h2 class="intro__title  intro__title--tablet">Взгляните на жизнь иначе</h2>
           <a class="intro__btn  btn" href="#">Скачать приложение</a>
           <div class="intro__list">
             <a class="intro__item  intro__item--apple" href="#">
@@ -64,19 +66,24 @@
         </div>
         <div class="advantage">
           <ul class="advantage__list  container">
-            <li class="advantage__item">
+            <li class="advantage__item  advantage__item--mood">
               <h3 class="advantage__title">Поднимает настроение</h3>
               <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="advantage__item">
+            <li class="advantage__item  advantage__item--world">
               <h3 class="advantage__title">Меняет мир вокруг</h3>
-              <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
-            <li class="advantage__item">
+            <li class="advantage__item  advantage__item--friends">
               <h3 class="advantage__title">Заводит новых друзей</h3>
               <p class="advantage__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
+          <div class="advantage__effect">
+            <h3 class="advantage__title  advantage__title--tablet">Эффект на&nbsp;24 часа!</h3>
+            <p class="advantage__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="advantage__link" href="#">Узнать больше об исследовании</a>
+          </div>
         </div>
       </section>
 
@@ -94,14 +101,17 @@
           </div>
           <blockquote class="reviews__slide  reviews__slide--first">
             <cite class="reviews__author">Николай Петров</cite>
+            <p class="reviews__info">25 лет, водитель трамвая</p>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="reviews__slide  reviews__slide--second">
             <cite class="reviews__author">Николай Иванов</cite>
+            <p class="reviews__info">35 лет, машинист поезда </p>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="reviews__slide  reviews__slide--third">
             <cite class="reviews__author">Николай Сидоров</cite>
+            <p class="reviews__info">45 лет, пилот самолёта</p>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
         </div>
@@ -121,6 +131,7 @@
         <table class="price__list">
           <thead class="price__top">
             <tr class="price__row">
+              <th class="price__header  price__header--mobile-hidden"></th>
               <th class="price__header  price__header--base">
                 <p class="price__name">База</p>
                 <span class="price__value">1,99 USD</span>
@@ -137,6 +148,9 @@
           </thead>
           <tbody class="price__bottom">
             <tr class="price__row">
+              <td class="price__cell  price__cell--mobile-hidden">
+                <span class="price__content">Розовый фильтр</span>
+              </td>
               <td class="price__cell  price__cell--yes">
                 <span class="price__content">Розовый фильтр</span>
               </td>
@@ -148,6 +162,9 @@
               </td>
             </tr>
             <tr class="price__row">
+              <td class="price__cell  price__cell--mobile-hidden">
+                <span class="price__content">Смайлики</span>
+              </td>
               <td class="price__cell  price__cell--no">
                 <span class="price__content">Смайлики</span>
               </td>
@@ -159,6 +176,9 @@
               </td>
             </tr>
             <tr class="price__row">
+              <td class="price__cell  price__cell--mobile-hidden">
+                <span class="price__content">Комментарии</span>
+              </td>
               <td class="price__cell  price__cell--no">
                 <span class="price__content">Комментарии</span>
               </td>
@@ -183,7 +203,7 @@
               <h3 class="contacts__text">Звоните:</h3>
               <span class="contacts__type">+7 (812) 555-66-66</span>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item  contacts__item--address">
               <h3 class="contacts__text">Пишите:</h3>
               <span class="contacts__type">mail@htmlacademy.ru</span>
             </li>
@@ -199,7 +219,7 @@
 
     <!--FOOTER-->
 
-    <footer class="page-footer  visually-hidden">
+    <footer class="page-footer  page-footer--index">
       <a class="page-footer__logo">
         <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
       </a>

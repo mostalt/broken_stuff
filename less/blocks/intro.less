@@ -6,9 +6,11 @@
   background-repeat: no-repeat;
 
   &--index {
-    position: relative;
     min-height: 450px;
     margin-bottom: 35px;
+    background-image: url("../img/bg-back-mobile-index@1x.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
   }
 }
 
@@ -19,13 +21,8 @@
   padding-right: 20px;
 
   &--index {
-    width: 280px;
-    margin: 0 auto;
     padding-top: 500px;
     padding-bottom: 30px;
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-position: 0 176px;
-    background-repeat: no-repeat;
   }
 }
 
@@ -67,6 +64,10 @@
   line-height: 30px;
   color: @secondary-text-color;
   text-align: center;
+
+  &--tablet {
+    display: none;
+  }
 }
 
 .intro__text {
@@ -76,4 +77,87 @@
   color: @secondary-text-color;
   text-align: center;
   letter-spacing: 1.4px;
+}
+
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .intro {
+    min-height: 440px;
+    margin-bottom: 90px;
+
+    &--index {
+      min-height: 730px;
+      margin-bottom: 50px;
+      background-image: url("../img/bg-back-tablet-index@1x.jpg");
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .intro__wrapper {
+    width: 490px;
+    padding-top: 50px;
+
+    &--index {
+      width: 320px;
+      padding-top: 100px;
+      padding-left: 0px;
+      padding-right: 300px;
+    }
+  }
+
+  .intro__title {
+    padding-top: 150px;
+    font-size: 40px;
+    line-height: 50px;
+
+    &--tablet {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      padding-top: 100px;
+    }
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .intro {
+    min-height: 395px;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &--index {
+      min-height: 853px;
+      background-image: url("../img/bg-back-desktop-index@1x.jpg");
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .intro__wrapper {
+    padding-top: 0px;
+
+    &--index {
+      padding-top: 450px;
+    }
+  }
+
+  .intro__title {
+    font-size: 50px;
+    line-height: 60px;
+
+    &--tablet {
+      display: none;
+    }
+  }
+
+  .intro__text {
+    display: none;
+  }
 }

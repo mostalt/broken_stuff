@@ -156,20 +156,21 @@
           <p class="upload__text">Выкладывайте все, что накопилось в телефоне!</p>
         </div>
         <form class="upload__form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="container">
+          <div class="upload__inner  container">
             <img class="upload__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фото для загрузки">
-            <div class="upload__controls">
-              <button class="upload__toggle  upload__toggle--crop" type="button"></button>
-              <button class="upload__toggle  upload__toggle--fill" type="button"></button>
-              <button class="upload__toggle  upload__toggle--contrast" type="button"></button>
-            </div>
-            <div class="upload__range">
-              <div class="upload__scale">
-                <div class="upload__bar"></div>
+            <div class="upload__user-block">
+              <div class="upload__controls">
+                <button class="upload__toggle  upload__toggle--crop" type="button"></button>
+                <div class="upload__range"></div>
+                <button class="upload__toggle  upload__toggle--fill" type="button"></button>
+                <div class="upload__range"></div>
+                <button class="upload__toggle  upload__toggle--contrast" type="button"></button>
+                <div class="upload__range"></div>
               </div>
+              <div class="upload__range  upload__range--mobile"></div>
+              <button class="upload__btn  upload__btn--post  btn" type="submit">Запостить</button>
+              <button class="upload__btn  upload__btn--cancel  btn" type="reset">Отмена</button>
             </div>
-            <button class="upload__btn  upload__btn--post  btn" type="submit">Запостить</button>
-            <button class="upload__btn  upload__btn--cancel  btn" type="reset">Отмена</button>
           </div>
         </form>
       </section>

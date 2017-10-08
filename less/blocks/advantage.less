@@ -18,9 +18,10 @@
 }
 
 .advantage__title {
-  font-family: @font-open-sans-bold;
+  font-family: @font-open-sans;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -28,6 +29,7 @@
   font-family: @font-open-sans;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 400;
 }
 
 /*--TABLET--*/
@@ -57,21 +59,18 @@
     box-sizing: border-box;
 
     &::before {
-      content: "";
+      content: url("../img/24.png");
       position: absolute;
       width: 238px;
       height: 276px;
       top: 60px;
       left: 20px;
-      background-image: url("../img/24.png");
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
     }
   }
 
   .advantage__title--tablet {
     width: 170px;
-    font-family: @font-open-sans-bold;
+    font-family: @font-open-sans;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;

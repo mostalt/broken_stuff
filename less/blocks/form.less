@@ -13,45 +13,35 @@
     width: 280px;
     margin-top: 5px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 13px 20px;
+    font-family: @font-open-sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
     box-sizing: border-box;
     border: 2px solid @border-color;
   }
 
   &--fio input[type="text"]::-webkit-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--fio input[type="text"]::-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--fio input[type="text"]:-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--fio input[type="text"]:-ms-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--checkbox {
     padding-top: 40px;
+    padding-bottom: 30px;
     background-color: @secondary-bg-color;
   }
 
@@ -64,40 +54,29 @@
     width: 280px;
     margin-top: 5px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 13px 20px;
+    font-family: @font-open-sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
     box-sizing: border-box;
     border: 2px solid @border-color;
   }
 
   &--contacts input[type="tel"]::-webkit-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--contacts input[type="tel"]::-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--contacts input[type="tel"]:-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--contacts input[type="tel"]:-ms-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
@@ -105,40 +84,29 @@
     width: 280px;
     margin-top: 5px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 13px 20px;
+    font-family: @font-open-sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: @main-text-color;
     box-sizing: border-box;
     border: 2px solid @border-color;
   }
 
   &--contacts input[type="email"]::-webkit-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--contacts input[type="email"]::-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--contacts input[type="email"]:-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &--contacts input[type="email"]:-ms-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
@@ -184,19 +152,23 @@
 .form__checkbox {
   position: relative;
   display: block;
+  width: 210px;
+  margin-top: 35px;
+  margin-bottom: 20px;
   padding-left: 70px;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-family: @font-open-sans;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   color: @main-text-color;
+  cursor: pointer;
 
   &::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 0;
     width: 35px;
     height: 35px;
@@ -215,19 +187,23 @@ input[type="checkbox"]:checked + .form__checkbox::before {
 .form__radio {
   position: relative;
   display: block;
+  width: 210px;
+  margin-top: 35px;
+  margin-bottom: 20px;
   padding-left: 70px;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-family: @font-open-sans;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   color: @main-text-color;
+  cursor: pointer;
 
   &::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 0;
     width: 35px;
     height: 35px;
@@ -247,39 +223,28 @@ input[type="radio"]:checked + .form__radio::before {
 .form__textarea {
   width: 280px;
   height: 200px;
-  padding: 20px;
+  padding: 13px 20px;
+  font-family: @font-open-sans;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: @main-text-color;
   box-sizing: border-box;
   border: 2px solid @border-color;
 
   &::-webkit-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &::-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &:-moz-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 
   &:-ms-input-placeholder {
-    font-family: @font-open-sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: @main-text-color;
   }
 }
@@ -340,8 +305,6 @@ input[type="radio"]:checked + .form__radio::before {
     flex-grow: 1;
     margin-top: 5px;
     margin-bottom: 50px;
-    padding: 20px;
-    box-sizing: border-box;
     border: 2px solid @border-color;
   }
 

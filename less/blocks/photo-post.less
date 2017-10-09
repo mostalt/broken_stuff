@@ -4,12 +4,10 @@
 
 .photo-post__image {
   width: 280px;
-  height: 180px;
   background-color: #c6c6c6;
 
   &--panorama {
-    width: 320px;
-    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -83,7 +81,6 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    min-height: 455px;
     margin-bottom: 20px;
 
     &--panorama {
@@ -97,8 +94,8 @@
     height: 300px;
 
     &--panorama {
-      width: 700px;
-      height: 510px;
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -155,20 +152,15 @@
 /*--DESKTOP--*/
 
 @media (min-width: @desktop-width) {
+  .photo-post__item {
+    margin-bottom: 50px;
+  }
+
   .photo-post__image {
     height: 400px;
 
     &--panorama {
-      width: 1200px;
-    }
-  }
-
-  .photo-post__item {
-    min-height: 555px;
-    margin-bottom: 50px;
-
-    &--panorama {
-      margin-bottom: 0;
+      height: auto;
     }
   }
 }

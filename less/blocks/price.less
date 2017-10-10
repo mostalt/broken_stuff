@@ -1,6 +1,4 @@
 .price {
-  width: 320px;
-  margin: 0 auto;
   margin-bottom: 50px;
   background-color: @secondary-bg-color;
   padding-top: 60px;
@@ -15,25 +13,28 @@
   border-collapse: collapse;
 }
 
-.price__top {
-  background-color: @secondary-color;
-}
-
 .price__header {
   padding-bottom: 15px;
   color: @secondary-text-color;
-  border: 2px solid @main-bg-color;
+  background-color: @secondary-color;
+  border: 2px solid #e5e5e5;
+
+  &--mobile-hidden {
+    display: none;
+  }
 }
 
 .price__name {
   margin-bottom: 5px;
-  font-family: @font-open-sans-bold;
+  font-family: @font-open-sans;
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
 }
 
 .price__value {
-  font-family: @font-open-sans-light;
+  font-family: @font-open-sans;
+  font-weight: 200;
   font-size: 24px;
   line-height: 30px;
 }
@@ -45,4 +46,85 @@
 .price__cell {
   padding: 15px 20px;
   border: 2px solid #e5e5e5;
+
+  &--yes {
+    background-image: url("../img/icon-yes.svg");
+    background-position: 93% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--no {
+    background-image: url("../img/icon-no.svg");
+    background-position: 93% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--mobile-hidden {
+    display: none;
+  }
+}
+
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .price {
+    width: 100%;
+  }
+
+  .price__list {
+    width: 620px;
+    margin: 0 auto;
+    transform: none;
+    text-transform: none;
+    empty-cells: hide;
+  }
+
+  .price__header {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &--mobile-hidden {
+      display: block;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .price__name {
+    margin-bottom: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .price__value {
+    font-size: 18px;
+  }
+
+  .price__cell {
+    min-width: 155px;
+    box-sizing: border-box;
+    padding: 7px 15px;
+
+    &--yes {
+      font-size: 0;
+      background-position: 50% 50%;
+    }
+
+    &--no {
+      font-size: 0;
+      background-position: 50% 50%;
+    }
+
+    &--mobile-hidden {
+      display: table-cell;
+    }
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .price__list {
+    width: 940px;
+  }
 }

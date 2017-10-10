@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink - конкурс</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -28,7 +29,7 @@
               <a class="main-nav__link" href="#">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">HTML Academy</a>
+              <a class="main-nav__link" href="#">HTML&nbsp;Academy</a>
             </li>
           </ul>
         </nav>
@@ -48,22 +49,29 @@
 
       <section class="story">
         <div class="container">
-          <p class="story__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="story__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+            <span class="story__text--desktop">Пожалуйста, заполните форму ниже:</span></p>
         </div>
         <form class="story__form  form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__item  form__item--fio">
             <div class="container">
-              <label class="form__text" for="last-name">Фамилия:</label>
-              <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию *" required>
-              <label class="form__text" for="first-name">Имя:</label>
-              <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя *" required>
-              <label class="form__text" for="patronymic">Отчество:</label>
-              <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+              <div class="form__fio  form__field--fio">
+                <label class="form__text" for="last-name">Фамилия:</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию *" required>
+              </div>
+              <div class="form__field  form__field--fio">
+                <label class="form__text" for="first-name">Имя:</label>
+                <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя *" required>
+              </div>
+              <div class="form__field  form__field--fio">
+                <label class="form__text" for="patronymic">Отчество:</label>
+                <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+              </div>
             </div>
           </div>
           <div class="form__item  form__item--checkbox">
+            <p class="form__title">Ваши безбашенные достижения в путешествии</p>
             <div class="container">
-              <p class="form__title">Ваши безбашенные достижения в путешествии</p>
               <input class="visually-hidden" type="checkbox" name="selfie-shark" id="selfie" value="Селфи" checked>
               <label class="form__checkbox" for="selfie">Сделал селфи с акулой</label>
               <input class="visually-hidden" type="checkbox" name="beach" id="beach" value="Пляж" checked>
@@ -79,16 +87,21 @@
             </div>
           </div>
           <div class="form__item  form__item--contacts">
+            <p class="form__title  form__title--mobile-hidden">Контактная информация</p>
             <div class="container">
-              <label class="form__text" for="number">Номер телефона</label>
-              <input type="tel" name="phone-number" id="number" placeholder="Номер, пожалуйста">
-              <label class="form__text" for="email">Адрес почты</label>
-              <input type="email" name="email-address" id="email" placeholder="Введите почту *" required>
+              <div class="form__field  form__field--contacts">
+                <label class="form__text" for="number">Номер телефона</label>
+                <input type="tel" name="phone-number" id="number" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="form__field  form__field--contacts">
+                <label class="form__text" for="email">Адрес почты</label>
+                <input type="email" name="email-address" id="email" placeholder="Введите почту *" required>
+              </div>
             </div>
           </div>
           <div class="form__item  form__item--app">
+            <p class="form__title">С каким приложением путешествовали?</p>
             <div class="container">
-              <p class="form__title">С каким приложением путешествовали?</p>
               <input class="visually-hidden" type="radio" name="app" id="ios" value="iOS" checked>
               <label class="form__radio" for="ios">Pink для iOS</label>
               <input class="visually-hidden" type="radio" name="app" id="android" value="Android">
@@ -106,7 +119,7 @@
           <div class="form__inner  container">
             <button class="form__btn  btn-submit" type="submit">Отправить форму</button>
             <span class="form__note">*</span>
-            <span class="form__note">— обязательные поля</span>
+            <span class="form__note">— обязательные <span class="form__note--desktop">для заполнения </span>поля</span>
           </div>
         </form>
       </section>
@@ -141,7 +154,7 @@
 
     <section class="modal  modal--error">
       <div class="container">
-        <h3 class="modal__title">Что-то пошло не так!</h3>
+        <h3 class="modal__title">Что-то пошло не&nbsp;так!</h3>
         <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal__btn  modal__btn--error  btn-submit">Oк</button>
       </div>

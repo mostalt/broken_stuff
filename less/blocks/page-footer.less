@@ -1,32 +1,66 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 40px;
+
+  &--index {
+    display: none;
+  }
 }
 
 .page-footer__logo {
-  display: block;
   width: 150px;
-  margin: 0 auto;
   margin-bottom: 35px;
 }
 
 .page-footer__copyright {
   display: flex;
   align-items: center;
-  padding-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 .page-footer__link {
   min-height: 40px;
-  margin: 0 auto;
   background-image: url("../img/logo-htmlacademy.svg");
   background-position: 100% 0%;
   background-repeat: no-repeat;
+  background-size: 30px 35px;
 }
 
 .page-footer__note {
-  margin-right: 40px;
+  margin-right: 45px;
   font-family: @font-open-sans;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @main-text-color;
+}
+
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 45px;
+  }
+
+  .page-footer__copyright {
+    margin-bottom: 20px;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 940px;
+  }
 }

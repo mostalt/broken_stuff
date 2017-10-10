@@ -3,8 +3,36 @@
 }
 
 .information__title {
-  font-family: @font-open-sans-light;
+  font-family: @font-open-sans;
+  font-weight: 200;
   font-size: 24px;
   line-height: 30px;
   text-align: center;
+}
+
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .information__wrapper {
+    width: 590px;
+  }
+
+  .information__title {
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 50px;
+
+    &:nth-child(2) {
+      width: 335px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .information__wrapper {
+    min-width: 940px;
+  }
 }

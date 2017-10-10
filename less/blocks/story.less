@@ -5,4 +5,33 @@
 .story__text {
   margin-bottom: 30px;
   text-align: center;
+
+  &--desktop {
+    display: none;
+  }
+}
+
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .story {
+    margin-top: 100px;
+  }
+
+  .story__text {
+    margin-bottom: 100px;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .story__text {
+    padding-left: 160px;
+    padding-right: 160px;
+
+    &--desktop {
+      display: inline;
+    }
+  }
 }

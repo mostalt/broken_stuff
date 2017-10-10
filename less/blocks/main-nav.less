@@ -26,9 +26,40 @@
   display: block;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-family: @font-open-sans-bold;
-  color: @secondary-text-color;
+  font-family: @font-open-sans;
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+  color: @secondary-text-color;
   text-transform: uppercase;
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    margin-left: auto;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .main-nav__item {
+    padding: 40px;
+    padding-right: 0;
+    padding-left: 80px;
+    border: none;
+  }
+
+  .main-nav__link {
+    padding: 0;
+    font-family: @font-open-sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+  }
 }

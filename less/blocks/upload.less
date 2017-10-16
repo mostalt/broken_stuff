@@ -1,9 +1,10 @@
 .upload {
   margin: 0;
+  overflow: hidden;
 }
 
 .upload__wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .upload__text {
@@ -19,19 +20,19 @@
 
 .upload__image {
   width: 300px;
-  height: 400px;
-  margin-bottom: 35px;
+  height: 374px;
+  margin-bottom: 40px;
 }
 
 .upload__controls {
   display: flex;
   justify-content: space-between;
-  width: 200px;
+  width: 210px;
   margin: 0 auto;
 }
 
 .upload__toggle {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   width: 50px;
   height: 50px;
   border: none;
@@ -62,16 +63,16 @@
 
   &--mobile {
     display: block;
-    margin-bottom: 70px;
+    margin-bottom: 73px;
   }
 
   &::before {
     content: "";
     position: absolute;
     top: -7px;
-    left: 187px;
-    width: 12px;
-    height: 12px;
+    left: 191px;
+    width: 10px;
+    height: 10px;
     border: 2px solid @main-color;
     border-radius: 50%;
     background-color: @secondary-bg-color;
@@ -90,7 +91,7 @@
 }
 
 .upload__btn {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: transparent;
@@ -111,7 +112,7 @@
 
 @media (min-width: @tablet-width) {
   .upload__wrapper {
-    margin-bottom: 60px;
+    margin-bottom: 69px;
   }
 
   .upload__text {
@@ -120,9 +121,14 @@
   }
 
   .upload__form {
-    padding-top: 60px;
+    padding-top: 57px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .upload__image {
+    height: 400px;
+    margin-bottom: 24px;
   }
 
   .upload__inner {
@@ -132,11 +138,15 @@
     justify-content: space-between;
   }
 
+  .upload__editor {
+    width: 300px;
+  }
+
   .upload__controls {
-    width: 250px;
+    width: 265px;
     height: 220px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 46px;
   }
 
   .upload__toggle {
@@ -149,39 +159,40 @@
     display: block;
     width: 204px;
     height: 2px;
-    margin-top: 25px;
-    margin-bottom: 40px;
+    margin-top: 19px;
+    margin-right: 0;
 
     &--mobile {
       display: none;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -7px;
-      left: 187px;
-      width: 12px;
-      height: 12px;
-      border: 2px solid @main-color;
-      border-radius: 50%;
-      background-color: @secondary-bg-color;
-      cursor: pointer;
+    &--contrast {
+      margin-top: 15px;
     }
 
     &::after {
-      content: "";
-      position: absolute;
-      top: 30px;
-      left: -45px;
-      width: 278px;
-      height: 1px;
-      background-color: @border-color;
+      width: 275px;
+      left: -55px;
     }
   }
 
+  .upload__range--crop::before {
+    left: 147px;
+  }
+
+  .upload__range--fill::before {
+    left: 26px;
+  }
+
+  .upload__range--contrast::before {
+    left: 97px;
+  }
+
   .upload__btn {
-    margin-top: 30px;
+    width: 260px;
+    margin-left: 27px;
+    margin-top: 26px;
+    margin-bottom: 24px;
   }
 }
 
@@ -191,24 +202,84 @@
   .upload {
     width: 940px;
     margin: 0 auto;
+    margin-bottom: 27px;
+  }
+
+  .upload__wrapper {
+    margin-bottom: 66px;
+  }
+
+  .upload__text {
+    padding-right: 19px;
   }
 
   .upload__form {
     padding-left: 70px;
     padding-right: 60px;
+    padding-bottom: 33px;
   }
 
-  .upload__user-block {
+  .upload__inner {
+    padding-right: 0;
+  }
+
+  .upload__editor {
     width: 412px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .upload__controls {
+    margin-left: 2px;
+    margin-bottom: 40px;
+    padding: 0;
+    width: 380px;
+  }
+
+  .upload__toggle {
+    margin-right: 0;
+
+    &--contrast {
+      background-position: 48% 0%;
+    }
+  }
+
+  .upload__range {
+    width: 290px;
+    margin-right: 0;
+    margin-left: 10px;
+
+    &::after {
+      left: -90px;
+      width: 410px;
+    }
+  }
+
+  .upload__range--crop::before {
+    left: 72px;
+  }
+
+  .upload__range--fill::before {
+    left: 248px;
+  }
+
+  .upload__range--contrast::before {
+    left: 161px;
   }
 
   .upload__btn {
     display: inline-block;
     margin-top: 85px;
+    margin-left: 0;
+    margin-right: 0;
     width: 185px;
+    font-family: @font-open-sans;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
 
     &--post {
-      margin-right: 35px;
+      margin-right: 38px;
     }
   }
 }

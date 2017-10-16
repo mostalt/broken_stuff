@@ -6,8 +6,53 @@
 .main-nav__toggle {
   position: absolute;
   top: -45px;
-  right: 0;
+  right: 20px;
+  display: block;
+  width: 50px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 10;
   cursor: pointer;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 4px;
+  background-color: @main-bg-color;
+  box-shadow: 0 10px 0 0 white, 0 20px 0 0 white;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: -49px;
+  right: 19px;
+  width: 25px;
+  height: 25px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -3px;
+    width: 30px;
+    height: 4px;
+    background-color: @main-bg-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .main-nav__list {
@@ -20,6 +65,11 @@
 .main-nav__item {
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000000;
+
+  &:first-child {
+    border-top: 1px solid #000000;
+    box-shadow: inset 0 1px 0 0 #485461;
+  }
 }
 
 .main-nav__link {
@@ -34,6 +84,32 @@
   text-transform: uppercase;
 }
 
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .main-nav .main-nav__toggle {
+    top: -65px;
+  }
+}
+
+@media (max-width: 959px) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__item {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+}
+
 /*--DESKTOP--*/
 
 @media (min-width: @desktop-width) {
@@ -41,14 +117,19 @@
     margin-left: auto;
   }
 
+  .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav__list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
   }
 
   .main-nav__item {
-    padding: 40px;
+    padding: 45px;
     padding-right: 0;
     padding-left: 80px;
     border: none;

@@ -11,37 +11,39 @@
     <!--NAVIGATION-->
 
     <header class="page-header  page-header--index">
-      <div class="page-header__wrapper">
-        <h1 class="page-header__title  visually-hidden">Pink</h1>
-        <a class="page-header__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
-        </a>
-        <nav class="main-nav  main-nav--opened  main-nav--nojs">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="photo.html">Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">HTML&nbsp;Academy</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="page-main">
+      <section class="page-header__menu  page-header__menu--opened">
+        <div class="page-header__wrapper">
+          <h1 class="page-header__title  visually-hidden">Pink</h1>
+          <a class="page-header__logo">
+            <img src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+          </a>
+          <nav class="main-nav  main-nav--opened  main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">HTML&nbsp;Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
 
       <!--INTRO-->
 
       <section class="intro  intro--index">
         <div class="intro__wrapper  intro__wrapper--index">
-          <h2 class="intro__title">Взгляните на жизнь иначе</h2>
+          <h2 class="intro__title">Взгляните на жизнь иначе!</h2>
           <a class="intro__btn  btn" href="#">Скачать приложение</a>
           <div class="intro__list">
             <a class="intro__item  intro__item--apple" href="#">
@@ -56,6 +58,8 @@
           <p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </section>
+    </header>
+    <main class="page-main">
 
       <!--INFORMATION-->
 
@@ -75,13 +79,13 @@
               <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
             <li class="advantage__item  advantage__item--friends">
-              <h3 class="advantage__title">Заводит новых друзей</h3>
+              <h3 class="advantage__title">Заводит новых&nbsp;друзей</h3>
               <p class="advantage__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
           <div class="advantage__effect">
-            <h3 class="advantage__title  advantage__title--tablet">Эффект на&nbsp;24 часа!</h3>
-            <p class="advantage__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <h3 class="advantage__title  advantage__title--effect">Эффект на&nbsp;24 часа!</h3>
+            <p class="advantage__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
             <a class="advantage__link" href="#">Узнать больше об исследовании</a>
           </div>
         </div>
@@ -95,9 +99,9 @@
           <input class="reviews__toggle  reviews__toggle--2  visually-hidden" type="radio" id="slide-2" name="reviews__toggle">
           <input class="reviews__toggle  reviews__toggle--3  visually-hidden" type="radio" id="slide-3" name="reviews__toggle">
           <div class="reviews__controls">
-            <label for="slide-1"></label>
-            <label for="slide-2"></label>
-            <label for="slide-3"></label>
+            <label class="reviews__label" for="slide-1"></label>
+            <label class="reviews__label" for="slide-2"></label>
+            <label class="reviews__label" for="slide-3"></label>
           </div>
           <blockquote class="reviews__slide  reviews__slide--first">
             <cite class="reviews__author">Николай Петров</cite>
@@ -114,6 +118,12 @@
             <p class="reviews__info">45 лет, пилот самолёта</p>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
+          <button class="reviews__arrow  reviews__arrow--previous" type="button">
+            <span class="visually-hidden">Предыдущий</span>
+            </button>
+          <button class="reviews__arrow  reviews__arrow--next" type="button">
+            <span class="visually-hidden">Следующий</span>
+          </button>
         </div>
       </section>
 
@@ -123,11 +133,6 @@
         <input class="price__toggle  price__toggle--1  visually-hidden" type="radio" id="price-1" name="price-toggle">
         <input class="price__toggle  price__toggle--2  visually-hidden" type="radio" id="price-2" name="price-toggle" checked>
         <input class="price__toggle  price__toggle--3  visually-hidden" type="radio" id="price-3" name="price-toggle">
-        <div class="price__controls">
-          <label for="price-1"></label>
-          <label for="price-2"></label>
-          <label for="price-3"></label>
-        </div>
         <table class="price__list">
           <thead class="price__top">
             <tr class="price__row">
@@ -136,7 +141,7 @@
                 <p class="price__name">База</p>
                 <span class="price__value">1,99 USD</span>
               </th>
-              <th class="price__header  price__header--standart">
+              <th class="price__header  price__header--standart  price__header--hit">
                 <p class="price__name">Стандарт</p>
                 <span class="price__value">3,99 USD</span>
               </th>
@@ -191,6 +196,11 @@
             </tr>
           </tbody>
         </table>
+        <div class="price__controls">
+          <label class="price__label" for="price-1"></label>
+          <label class="price__label" for="price-2"></label>
+          <label class="price__label" for="price-3"></label>
+        </div>
       </section>
 
       <!--CONTACTS-->
@@ -199,15 +209,15 @@
         <div class="contacts__info  container">
           <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
           <ul class="contacts__list">
-            <li class="contacts__item">
+            <li class="contacts__item  contacts__item--phone">
               <h3 class="contacts__text">Звоните:</h3>
               <span class="contacts__type">+7 (812) 555-66-66</span>
             </li>
-            <li class="contacts__item  contacts__item--address">
+            <li class="contacts__item  contacts__item--email">
               <h3 class="contacts__text">Пишите:</h3>
               <span class="contacts__type">mail@htmlacademy.ru</span>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item  contacts__item--address">
               <h3 class="contacts__text">Приезжайте в гости:</h3>
               <span class="contacts__type">ул. Большая Конюшенная, 19/8</span>
             </li>
@@ -241,5 +251,26 @@
         </a>
       </div>
     </footer>
+    <script>
+  var navMain = document.querySelector(".main-nav");
+  var menuMain = document.querySelector(".page-header__menu");
+  var navToggle = document.querySelector(".main-nav__toggle");
+
+  navMain.classList.remove("main-nav--nojs");
+
+  navToggle.addEventListener("click", function() {
+    if (navMain.classList.contains("main-nav--closed")) {
+      navMain.classList.remove("main-nav--closed");
+      navMain.classList.add("main-nav--opened");
+      menuMain.classList.remove("page-header__menu--closed");
+      menuMain.classList.add("page-header__menu--opened");
+    } else {
+      navMain.classList.add("main-nav--closed");
+      navMain.classList.remove("main-nav--opened");
+      menuMain.classList.add("page-header__menu--closed");
+      menuMain.classList.remove("page-header__menu--opened");
+    }
+  });
+    </script>
   </body>
 </html>

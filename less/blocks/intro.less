@@ -1,5 +1,6 @@
 .intro {
-  min-height: 238px;
+  margin-bottom: 45px;
+  min-height: 236px;
   background-color: #1d2631;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: 50% 0%;
@@ -7,7 +8,7 @@
 
   &--index {
     min-height: 450px;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     background-image: url("../img/bg-back-mobile-index@1x.jpg");
     background-position: 50% 0%;
     background-repeat: no-repeat;
@@ -21,44 +22,68 @@
   padding-right: 20px;
 
   &--index {
-    padding-top: 500px;
-    padding-bottom: 30px;
+    padding-top: 490px;
+    padding-bottom: 16px;
   }
 }
 
 .intro__btn {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  &:hover {
+    color: @main-color;
+    background-color: @main-bg-color;
+  }
+
+  &:focus {
+    color: @main-color;
+    background-color: @main-bg-color;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+    outline: none;
+  }
 }
 
 .intro__list {
   display: flex;
   justify-content: space-around;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 17px;
 }
 
 .intro__item {
   display: block;
-  width: 60px;
+  width: 55px;
   height: 60px;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  outline: none;
 
   &--apple {
     background-image: url("../img/logo-apple.svg");
+    background-position: 50% -50%;
   }
 
   &--android {
     background-image: url("../img/logo-android.svg");
+    background-position: 50% 50%;
   }
 
   &--windows {
     background-image: url("../img/logo-microsoft.svg");
+    background-position: 50% 60%;
   }
 }
 
 .intro__title {
   margin: 0;
-  padding-top: 100px;
+  padding-top: 95px;
   font-family: @font-open-sans;
   font-weight: 200;
   font-size: 24px;
@@ -78,17 +103,17 @@
   line-height: 24px;
   color: @secondary-text-color;
   text-align: center;
-  letter-spacing: 1.4px;
 }
 
 /*--TABLET--*/
 
 @media (min-width: @tablet-width) {
   .intro {
-    min-height: 440px;
-    margin-bottom: 90px;
+    min-height: 441px;
+    margin-bottom: 92px;
 
     &--index {
+      display: flex;
       min-height: 730px;
       margin-bottom: 50px;
       background-image: url("../img/bg-back-tablet-index@1x.jpg");
@@ -102,25 +127,43 @@
     padding-top: 50px;
 
     &--index {
-      width: 320px;
+      width: 300px;
       padding-top: 100px;
-      padding-left: 0;
-      padding-right: 300px;
+      padding-left: 20px;
+      padding-right: 340px;
     }
   }
 
   .intro__title {
-    padding-top: 150px;
-    font-size: 40px;
-    line-height: 50px;
+    padding-top: 130px;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .intro--index .intro__title {
     display: block;
     width: 200px;
-    margin: 0 auto;
-    margin-bottom: 60px;
-    padding-top: 100px;
+    margin-bottom: 31px;
+    padding-top: 104px;
+    padding-left: 50px;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  .intro__btn {
+    margin-bottom: 47px;
+  }
+
+  .intro__list {
+    width: 240px;
+    margin-left: 28px;
+    margin-bottom: 30px;
+  }
+
+  .intro__text {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -128,22 +171,28 @@
 
 @media (min-width: @desktop-width) {
   .intro {
-    min-height: 395px;
+    min-height: 396px;
     margin-top: 0;
 
     &--index {
-      min-height: 853px;
-      background-image: url("../img/bg-back-desktop-index@1x.jpg");
-      background-position: 50% 0;
-      background-repeat: no-repeat;
+      margin-bottom: 67px;
+      min-height: 856px;
+      background-image: none;
+      background-color: transparent;
     }
   }
 
   .intro__wrapper {
-    padding-top: 0;
+    padding-top: 45px;
 
     &--index {
-      padding-top: 450px;
+      width: 600px;
+      padding-top: 116px;
+      padding-left: 0;
+    }
+
+    &--form {
+      width: 750px;
     }
   }
 
@@ -153,10 +202,22 @@
   }
 
   .intro--index .intro__title {
-    display: none;
+    width: 250px;
+    margin-bottom: 52px;
+    padding-left: 25px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .intro__btn {
+    margin-bottom: 68px;
+  }
+
+  .intro__list {
+    margin-bottom: 50px;
   }
 
   .intro__text {
-    display: none;
+    width: 300px;
   }
 }

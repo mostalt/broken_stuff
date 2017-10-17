@@ -1,8 +1,9 @@
 .information__wrapper {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .information__title {
+  margin-bottom: 26px;
   font-family: @font-open-sans;
   font-weight: 200;
   font-size: 24px;
@@ -20,7 +21,7 @@
   .information__title {
     margin-bottom: 0;
     font-size: 40px;
-    line-height: 50px;
+    line-height: 48px;
 
     &:nth-child(2) {
       width: 335px;
@@ -34,5 +35,15 @@
 @media (min-width: @desktop-width) {
   .information__wrapper {
     min-width: 940px;
+  }
+
+  .information__title {
+    font-size: 50px;
+    line-height: 60px;
+
+    &:nth-child(2) {
+      width: 420px;
+      margin: 0 auto;
+    }
   }
 }

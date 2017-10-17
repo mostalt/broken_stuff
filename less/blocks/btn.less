@@ -1,8 +1,7 @@
 .btn {
   display: block;
   width: 280px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding: 18px 15px;
   font-family: @font-open-sans;
   font-size: 18px;
   line-height: 18px;
@@ -12,4 +11,21 @@
   border: 3px solid #ffffff;
   box-sizing: border-box;
   border-radius: 30px;
+}
+
+/*--TABLET--*/
+
+@media (min-width: @tablet-width) {
+  .btn {
+    width: 300px;
+  }
+}
+
+/*--DESKTOP--*/
+
+@media (min-width: @desktop-width) {
+  .btn {
+    font-size: 21px;
+    line-height: 18px;
+  }
 }

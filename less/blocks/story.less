@@ -1,12 +1,12 @@
 .story {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .story__text {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
   text-align: center;
 
-  &--desktop {
+  &--mobile-hidden {
     display: none;
   }
 }
@@ -15,11 +15,21 @@
 
 @media (min-width: @tablet-width) {
   .story {
-    margin-top: 100px;
+    margin-top: 90px;
   }
 
   .story__text {
-    margin-bottom: 100px;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 68px;
+    font-family: @font-open-sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+
+    &--mobile-hidden {
+      display: inline;
+    }
   }
 }
 
@@ -27,11 +37,7 @@
 
 @media (min-width: @desktop-width) {
   .story__text {
-    padding-left: 160px;
-    padding-right: 160px;
-
-    &--desktop {
-      display: inline;
-    }
+    width: 760px;
+    margin-bottom: 60px;
   }
 }

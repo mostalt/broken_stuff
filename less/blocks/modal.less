@@ -1,17 +1,21 @@
 .modal {
+  display: none;
   position: fixed;
   width: 320px;
   margin: 0;
-  padding-top: 20px;
   z-index: 20;
   text-align: center;
   background-color: @main-bg-color;
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
-  display: none;
+
+  &--show {
+    display: block;
+  }
 
   &--error {
     top: 25%;
     left: 50%;
+    padding-top: 24px;
     padding-bottom: 50px;
     transform: translate(-50%, -25%);
   }
@@ -19,36 +23,53 @@
   &--success {
     top: 75%;
     left: 50%;
+    padding-top: 20px;
     padding-bottom: 0;
     transform: translate(-50%, -75%);
   }
 }
 
 .modal__title {
-  margin-bottom: 20px;
   font-family: @font-open-sans;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+
+  &--error {
+    margin-bottom: 29px;
+  }
+
+  &--success {
+    margin-bottom: 27px;
+  }
 }
 
 .modal__text {
-  margin-bottom: 35px;
   font-family: @font-open-sans;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: @main-text-color;
+
+  &--error {
+    margin-bottom: 39px;
+  }
+
+  &--success {
+    margin-bottom: 31px;
+  }
 }
 
 .modal__inner {
-  padding-top: 50px;
+  padding-top: 48px;
   padding-bottom: 50px;
   background-color: @secondary-bg-color;
 }
 
 .modal__btn {
+  padding-top: 17px;
+  padding-bottom: 17px;
   cursor: pointer;
 
   &--success {
@@ -61,6 +82,16 @@
 @media (min-width: @tablet-width) {
   .modal {
     width: 460px;
+
+    &--error {
+      padding-top: 7px;
+      padding-bottom: 50px;
+    }
+
+    &--success {
+      padding-top: 9px;
+      padding-bottom: 0;
+    }
   }
 
   .modal .container {
@@ -70,14 +101,31 @@
   .modal__title {
     font-size: 30px;
     line-height: 40px;
+
+    &--error {
+      margin-bottom: 22px;
+    }
+
+    &--success {
+      margin-bottom: 20px;
+    }
   }
 
   .modal__text {
     font-size: 18px;
     line-height: 24px;
+
+    &--success {
+      margin-bottom: 33px;
+    }
+  }
+
+  .modal__inner {
+    padding-bottom: 53px;
   }
 
   .modal__btn {
+    width: 300px;
     margin: 0 auto;
   }
 }
@@ -85,12 +133,42 @@
 /*--DESKTOP--*/
 
 @media (min-width: @desktop-width) {
-  .modal--success {
-    width: 780px;
+  .modal {
+    &--error {
+      padding-top: 5px;
+    }
+
+    &--success {
+      width: 780px;
+      padding-top: 10px;
+    }
   }
 
   .modal--success .container {
     width: 400px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+
+    &--error {
+      margin-bottom: 22px;
+    }
+
+    &--success {
+      margin-bottom: 23px;
+    }
+  }
+
+  .modal__text {
+    &--error {
+      margin-bottom: 37px;
+    }
+
+    &--success {
+      margin-bottom: 38px;
+    }
   }
 
   .modal__btn--success {

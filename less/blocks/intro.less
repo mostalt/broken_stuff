@@ -31,6 +31,22 @@
   margin-bottom: 33px;
   padding-top: 14px;
   padding-bottom: 17px;
+
+  &:hover {
+    color: @main-color;
+    background-color: @main-bg-color;
+  }
+
+  &:focus {
+    color: @main-color;
+    background-color: @main-bg-color;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+    outline: none;
+  }
 }
 
 .intro__list {
@@ -47,6 +63,7 @@
   height: 60px;
   background-color: transparent;
   background-repeat: no-repeat;
+  outline: none;
 
   &--apple {
     background-image: url("../img/logo-apple.svg");

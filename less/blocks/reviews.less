@@ -1,7 +1,7 @@
 .reviews {
   overflow: hidden;
 
-  ::after {
+  &::after {
     display: block;
     top: 270px;
     left: -360px;
@@ -29,26 +29,44 @@
   vertical-align: top;
   width: 6px;
   height: 6px;
-  background-color: #bec2c7;
+  background-color: @secondary-color;
+  opacity: 0.3;
   border: 3px solid @main-bg-color;
   border-radius: 50%;
   transition-duration: 0.3s;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+    outline: none;
+  }
+}
+
+input[type="radio"]:focus + .reviews__label {
+  opacity: 0.6;
+  outline: none;
 }
 
 .reviews__toggle--1:checked ~ .reviews__controls [for="slide-1"] {
   background-color: @main-bg-color;
-  border: 3px solid #33404e;
+  border: 3px solid @secondary-color;
+  opacity: 1;
 }
 
 .reviews__toggle--2:checked ~ .reviews__controls [for="slide-2"] {
   background-color: @main-bg-color;
-  border: 3px solid #33404e;
+  border: 3px solid @secondary-color;
+  opacity: 1;
 }
 
 .reviews__toggle--3:checked ~ .reviews__controls [for="slide-3"] {
   background-color: @main-bg-color;
-  border: 3px solid #33404e;
+  border: 3px solid @secondary-color;
+  opacity: 1;
 }
 
 .reviews__slide {
@@ -180,6 +198,8 @@
     top: 174px;
     width: 21px;
     height: 42px;
+    background-color: @secondary-color;
+    opacity: 0.3;
     border: none;
     cursor: pointer;
 
@@ -189,6 +209,20 @@
 
     &--next {
       right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.1;
+      outline: none;
     }
   }
 }

@@ -11,7 +11,8 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border: 3px solid #e9ebec;
+  border: 3px solid @secondary-color;
+  opacity: 0.1;
   border-radius: 50%;
 
   &--tw {
@@ -25,6 +26,20 @@
   &--yt {
     margin-right: 0;
     background-image: url("../img/icon-youtube.svg");
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
+    outline: none;
   }
 }
 

@@ -19,6 +19,20 @@
     color: @main-text-color;
     box-sizing: border-box;
     border: 2px solid @border-color;
+
+    &:hover {
+      border: 2px solid @secondary-color;
+    }
+
+    &:focus {
+      border: 2px solid @secondary-color;
+      outline: none;
+    }
+
+    &:active {
+      border: 2px solid @main-color;
+      outline: none;
+    }
   }
 
   &--fio input[type="text"]::-webkit-input-placeholder {
@@ -60,6 +74,20 @@
     color: @main-text-color;
     box-sizing: border-box;
     border: 2px solid @border-color;
+
+    &:hover {
+      border: 2px solid @secondary-color;
+    }
+
+    &:focus {
+      border: 2px solid @secondary-color;
+      outline: none;
+    }
+
+    &:active {
+      border: 2px solid @main-color;
+      outline: none;
+    }
   }
 
   &--contacts input[type="tel"]::-webkit-input-placeholder {
@@ -90,6 +118,20 @@
     color: @main-text-color;
     box-sizing: border-box;
     border: 2px solid @border-color;
+
+    &:hover {
+      border: 2px solid @secondary-color;
+    }
+
+    &:focus {
+      border: 2px solid @secondary-color;
+      outline: none;
+    }
+
+    &:active {
+      border: 2px solid @main-color;
+      outline: none;
+    }
   }
 
   &--contacts input[type="email"]::-webkit-input-placeholder {
@@ -177,6 +219,18 @@
     border: 2px solid @border-color;
     cursor: pointer;
   }
+
+  &:hover::before {
+    border: 2px solid @secondary-color;
+  }
+
+  &:active::before {
+    border: 2px solid @main-color;
+  }
+}
+
+input[type="checkbox"]:focus + .form__checkbox::before {
+  border: 2px solid @secondary-color;
 }
 
 input[type="checkbox"]:checked + .form__checkbox::before {
@@ -213,6 +267,18 @@ input[type="checkbox"]:checked + .form__checkbox::before {
     border-radius: 50%;
     cursor: pointer;
   }
+
+  &:hover::before {
+    border: 2px solid @secondary-color;
+  }
+
+  &:active::before {
+    border: 2px solid @main-color;
+  }
+}
+
+input[type="radio"]:focus + .form__radio::before {
+  border: 2px solid @secondary-color;
 }
 
 input[type="radio"]:checked + .form__radio::before {
@@ -237,6 +303,20 @@ input[type="radio"]:checked + .form__radio::before {
   box-sizing: border-box;
   border: 2px solid @border-color;
   resize: vertical;
+
+  &:hover {
+    border: 2px solid @secondary-color;
+  }
+
+  &:focus {
+    border: 2px solid @secondary-color;
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid @main-color;
+    outline: none;
+  }
 
   &::-webkit-input-placeholder {
     color: @main-text-color;

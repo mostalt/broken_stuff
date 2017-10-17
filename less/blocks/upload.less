@@ -39,6 +39,7 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  outline: none;
 
   &--crop {
     background-image: url("../img/icon-editor-crop.svg");
@@ -79,6 +80,10 @@
     cursor: pointer;
   }
 
+  &:active::before {
+    background-color: @main-color;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -100,11 +105,44 @@
   &--post {
     color: @main-color;
     border-color: @main-color;
+
+    &:hover {
+      background-color: @main-color;
+      color: @secondary-text-color;
+    }
+
+    &:focus {
+      background-color: @main-color;
+      color: @secondary-text-color;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
   }
 
   &--cancel {
-    color: #e3e4e4;
-    border-color: #dddfe0;
+    color: @main-text-color;
+    border-color: @secondary-color;
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:focus {
+      opacity: 0.3;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: @secondary-color;
+      opacity: 0.3;
+      outline: none;
+    }
   }
 }
 

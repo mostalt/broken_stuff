@@ -3,7 +3,7 @@
   background-color: @main-bg-color;
   text-align: center;
 
-  ::before {
+  &::before {
     display: block;
     top: 0;
     right: 0;
@@ -25,7 +25,7 @@
   padding-left: 0;
   list-style: none;
 
-  ::before {
+  &::before {
     display: block;
     top: 250px;
     right: 140px;
@@ -59,6 +59,27 @@
   font-size: 24px;
   line-height: 28px;
   color: @main-color;
+}
+
+.contacts__item--email .contacts__type {
+  cursor: pointer;
+
+  &:hover {
+    color: @secondary-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: @secondary-color;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  &:active {
+    color: @secondary-color;
+    opacity: 0.3;
+    outline: none;
+  }
 }
 
 .contacts__map {

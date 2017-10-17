@@ -23,26 +23,43 @@
   vertical-align: top;
   width: 6px;
   height: 6px;
-  background-color: #bec2c7;
+  background-color: @secondary-color;
+  opacity: 0.3;
   border: 3px solid @secondary-bg-color;
   border-radius: 50%;
   transition-duration: 0.3s;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+input[type="radio"]:focus + .price__label {
+  opacity: 0.6;
+  outline: none;
 }
 
 .price__toggle--1:checked ~ .price__controls [for="price-1"] {
   background-color: @main-bg-color;
-  border: 3px solid #33404e;
+  border: 3px solid @secondary-color;
+  opacity: 1;
 }
 
 .price__toggle--2:checked ~ .price__controls [for="price-2"] {
   background-color: @main-bg-color;
-  border: 3px solid #33404e;
+  border: 3px solid @secondary-color;
+  opacity: 1;
 }
 
 .price__toggle--3:checked ~ .price__controls [for="price-3"] {
   background-color: @main-bg-color;
-  border: 3px solid #33404e;
+  border: 3px solid @secondary-color;
+  opacity: 1;
 }
 
 .price__list {

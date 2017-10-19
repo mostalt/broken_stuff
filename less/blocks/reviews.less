@@ -137,6 +137,7 @@ input[type="radio"]:focus + .reviews__label {
   }
 
   .reviews__text {
+    width: 620px;
     margin-bottom: 35px;
     font-family: @font-open-sans;
     font-weight: 400;
@@ -166,7 +167,17 @@ input[type="radio"]:focus + .reviews__label {
     width: 960px;
     position: relative;
     margin: 0 auto;
-    padding-top: 134px;
+    padding-top: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 173px;
+      background-image: url("../img/icon-quotes.svg");
+      background-position: 50% 66%;
+      background-repeat: no-repeat;
+      background-size: 77px auto;
+    }
   }
 
   .reviews__controls {
@@ -179,6 +190,7 @@ input[type="radio"]:focus + .reviews__label {
   }
 
   .reviews__text {
+    width: 700px;
     margin-bottom: 35px;
   }
 
@@ -195,20 +207,26 @@ input[type="radio"]:focus + .reviews__label {
   .reviews__arrow {
     position: absolute;
     display: block;
-    top: 174px;
+    top: 212px;
     width: 21px;
     height: 42px;
-    background-color: @secondary-color;
+    background-color: transparent;
     opacity: 0.3;
     border: none;
     cursor: pointer;
 
     &--previous {
       left: 10px;
+      background-image: url("../img/icon-review-arrow-left.svg");
+      background-position: 0% 50%;
+      background-repeat: no-repeat;
     }
 
     &--next {
       right: 10px;
+      background-image: url("../img/icon-review-arrow-right.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
     }
 
     &:hover {

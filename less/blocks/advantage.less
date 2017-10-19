@@ -15,6 +15,11 @@
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-position: 50% 109%;
   background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+    background-size: 157px auto;
+  }
 }
 
 .advantage__effect {
@@ -52,7 +57,14 @@
     padding-top: 74px;
     padding-bottom: 6px;
     text-align: left;
-    background-position: 20px 200px;
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    background-position: 21px 20px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      background-size: 268px auto;
+    }
   }
 
   .advantage__item {
@@ -73,12 +85,24 @@
     box-sizing: border-box;
 
     &::before {
-      content: url("../img/24.png");
+      content: "24";
       position: absolute;
       width: 238px;
       height: 276px;
       top: 59px;
       left: 21px;
+      padding-left: 63px;
+      padding-top: 57px;
+      font-family: @font-open-sans;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 187px;
+      color: @main-color;
+      box-sizing: border-box;
+      background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
+      background-position: 50% 75%, 50% 50%;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 202px auto, 238px auto;
     }
   }
 
@@ -106,6 +130,7 @@
 
 @media (min-width: @desktop-width) {
   .advantage {
+    margin-bottom: 0;
     background-image: url("../img/bg-triangle-white.svg"), none;
     background-position: 0% 0%;
   }
@@ -113,7 +138,7 @@
   .advantage__list {
     display: flex;
     justify-content: space-between;
-    padding-top: 54px;
+    padding-top: 44px;
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
@@ -121,29 +146,51 @@
     background-image: none;
   }
 
-  .advantage__item {
+  .advantage__item--mood {
     width: 240px;
     margin-left: 0;
-    padding-top: 350px;
+    padding-top: 360px;
     padding-left: 20px;
     padding-right: 20px;
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
 
-    &--mood {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
-      background-position: 50% 0%;
-      background-repeat: no-repeat;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      background-size: 292px auto;
     }
+  }
 
-    &--world {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
-      background-position: 50% 0%;
-      background-repeat: no-repeat;
+  .advantage__item--world {
+    width: 240px;
+    margin-left: 0;
+    padding-top: 360px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    background-position: 25% 0%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      background-size: 292px auto;
     }
+  }
 
-    &--friends {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
-      background-position: 50% 0%;
-      background-repeat: no-repeat;
+  .advantage__item--friends {
+    width: 240px;
+    margin-left: 0;
+    padding-top: 360px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    background-position: 25% 0%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      background-size: 292px auto;
     }
   }
 
@@ -165,6 +212,18 @@
     padding-top: 88px;
     padding-bottom: 110px;
     padding-right: 45px;
+
+    &::before {
+      width: 300px;
+      height: 350px;
+      top: -10px;
+      left: 0;
+      padding-left: 80px;
+      padding-top: 98px;
+      font-size: 120px;
+      line-height: 187px;
+      background-size: 254px auto, 300px auto;
+    }
   }
 
   .advantage__title--effect {

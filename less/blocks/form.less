@@ -469,13 +469,16 @@ input[type="radio"]:checked + .form__radio::before {
     flex-direction: column;
 
     &::after {
+      content: url("../img/icon-phone.svg");
       position: absolute;
-      content: "";
       display: block;
-      top: 5px;
+      top: 7px;
       right: -2px;
       width: 62px;
-      height: 60px;
+      height: 58px;
+      padding-top: 19px;
+      padding-left: 22px;
+      box-sizing: border-box;
       background-color: #e5e5e5;
     }
   }
@@ -486,13 +489,16 @@ input[type="radio"]:checked + .form__radio::before {
     flex-direction: column;
 
     &::after {
+      content: url("../img/icon-mail.svg");
       position: absolute;
-      content: "";
       display: block;
-      top: 5px;
+      top: 7px;
       right: -2px;
       width: 62px;
-      height: 60px;
+      height: 58px;
+      padding-top: 16px;
+      padding-left: 22px;
+      box-sizing: border-box;
       background-color: #e5e5e5;
     }
   }
@@ -670,6 +676,10 @@ input[type="radio"]:checked + .form__radio::before {
 
   .form__item--contacts .form__title {
     margin-top: 0;
+  }
+
+  .form__item--contacts .form__field::after {
+    right: 2px;
   }
 
   .form__item--contacts input[type="tel"] {

@@ -38,19 +38,21 @@
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
   outline: none;
 
   &--crop {
     background-image: url("../img/icon-editor-crop.svg");
+    background-position: 0% 0%;
   }
 
   &--fill {
     background-image: url("../img/icon-editor-fill.svg");
+    background-position: 0% 100%;
   }
 
   &--contrast {
     background-image: url("../img/icon-editor-contrast.svg");
+    background-position: 40% 45%;
   }
 }
 
@@ -70,7 +72,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -7px;
+    top: -6px;
     left: 191px;
     width: 10px;
     height: 10px;
@@ -159,7 +161,7 @@
   }
 
   .upload__form {
-    padding-top: 57px;
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -167,6 +169,7 @@
   .upload__image {
     height: 400px;
     margin-bottom: 24px;
+    padding-top: 7px;
   }
 
   .upload__inner {
@@ -181,23 +184,33 @@
   }
 
   .upload__controls {
-    width: 265px;
-    height: 220px;
+    width: 270px;
     flex-wrap: wrap;
-    margin-bottom: 46px;
+    margin-bottom: 54px;
   }
 
   .upload__toggle {
-    width: 45px;
-    height: 45px;
-    margin: 0;
+    width: 60px;
+    height: 60px;
+    //margin: 0;
+    margin-bottom: 13px;
+    transform: scale(0.55);
+
+    &--fill {
+      background-position: 0 4px;
+    }
+
+    &--contrast {
+      background-position: 9px 2px;
+    }
   }
 
   .upload__range {
     display: block;
     width: 204px;
     height: 2px;
-    margin-top: 19px;
+    margin-top: 26px;
+    margin-bottom: 20px;
     margin-right: 0;
 
     &--mobile {
@@ -205,7 +218,7 @@
     }
 
     &--contrast {
-      margin-top: 15px;
+      margin-top: 23px;
     }
 
     &::after {
@@ -215,15 +228,15 @@
   }
 
   .upload__range--crop::before {
-    left: 147px;
+    left: 146px;
   }
 
   .upload__range--fill::before {
-    left: 26px;
+    left: 25px;
   }
 
   .upload__range--contrast::before {
-    left: 97px;
+    left: 96px;
   }
 
   .upload__btn {
@@ -244,7 +257,7 @@
   }
 
   .upload__wrapper {
-    margin-bottom: 66px;
+    margin-bottom: 68px;
   }
 
   .upload__text {
@@ -269,16 +282,21 @@
 
   .upload__controls {
     margin-left: 2px;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     padding: 0;
     width: 380px;
   }
 
   .upload__toggle {
     margin-right: 0;
+    transform: none;
+
+    &--crop {
+      background-position: 0% 25%;
+    }
 
     &--contrast {
-      background-position: 48% 0%;
+      background-position: 20% 30%;
     }
   }
 
@@ -294,15 +312,15 @@
   }
 
   .upload__range--crop::before {
-    left: 72px;
+    left: 73px;
   }
 
   .upload__range--fill::before {
-    left: 248px;
+    left: 249px;
   }
 
   .upload__range--contrast::before {
-    left: 161px;
+    left: 162px;
   }
 
   .upload__btn {

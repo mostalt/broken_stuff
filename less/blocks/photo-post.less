@@ -10,7 +10,7 @@
     position: absolute;
     display: block;
     top: 0;
-    right: 20px;
+    left: 50%;
     width: 140px;
     height: 36px;
     padding: 6px 19px;
@@ -26,17 +26,24 @@
 }
 
 .photo-post__image {
-  width: 280px;
   background-color: #c6c6c6;
 
   &--panorama {
     width: 100%;
+    margin: 0 auto;
   }
 }
 
 .photo-post__link {
+  display: block;
+  width: 280px;
+  height: auto;
   margin-bottom: 0;
   padding-bottom: 0;
+
+  &--panorama {
+    width: 100%;
+  }
 }
 
 .photo-post__comment {
@@ -125,15 +132,15 @@
 
   .photo-post__item--panorama::before {
     top: 56px;
+    left: 74.5%;
   }
 
-  .photo-post__image {
+  .photo-post__link {
     width: 300px;
-    height: 300px;
+    height: auto;
 
     &--panorama {
       width: 100%;
-      min-height: 508px; //for layout
     }
   }
 
@@ -212,10 +219,10 @@
   }
 
   .photo-post__item--panorama::before {
-    right: 10px;
+    left: 77.5%;
   }
 
-  .photo-post__image {
+  .photo-post__link {
     height: 400px;
 
     &--panorama {

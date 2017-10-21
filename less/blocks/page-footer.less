@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
+  padding-bottom: 40px;
 
   &--index {
     display: none;
@@ -11,33 +12,69 @@
 
 .page-footer__logo {
   width: 150px;
-  margin-bottom: 40px;
+  margin-bottom: 29px;
   margin-left: 3px;
   outline: none;
+
+  &:hover .page-footer__icon {
+    fill: @main-color;
+  }
+
+  &:focus .page-footer__icon {
+    fill: @main-color;
+  }
+
+  &:active .page-footer__icon {
+    fill: @secondary-color;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__icon {
+  fill: @secondary-color;
+
+  &--desktop {
+    display: none;
+  }
 }
 
 .page-footer__copyright {
   display: flex;
   align-items: center;
-  margin-bottom: 35px;
 }
 
 .page-footer__link {
-  min-height: 40px;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-position: 100% 0%;
-  background-repeat: no-repeat;
-  background-size: 30px 35px;
+  display: flex;
+  align-items: center;
   outline: none;
+
+  &:hover .page-footer__academy {
+    fill: @secondary-color;
+  }
+
+  &:focus .page-footer__academy {
+    fill: @secondary-color;
+  }
+
+  &:active .page-footer__academy {
+    fill: @secondary-color;
+    opacity: 0.3;
+  }
 }
 
 .page-footer__note {
-  margin-right: 45px;
+  margin-right: 15px;
   font-family: @font-open-sans;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @main-text-color;
+}
+
+.page-footer__academy {
+  margin: 0;
+  padding-top: 3px;
+  fill: @main-color;
 }
 
 /*--TABLET--*/
@@ -49,21 +86,20 @@
     justify-content: space-between;
     width: 620px;
     margin: 0 auto;
-    padding-top: 33px;
+    padding-top: 30px;
+    padding-bottom: 37px;
+    box-sizing: border-box;
   }
 
   .page-footer__logo {
-    margin-bottom: 50px;
+    margin-top: 0;
     margin-left: 0;
+    margin-bottom: 0;
   }
 
   .page-footer__copyright {
-    margin-bottom: 20px;
+    margin-top: 10px;
     padding-left: 22px;
-  }
-
-  .page-footer__note {
-    margin-right: 42px;
   }
 }
 
@@ -72,16 +108,23 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     width: 940px;
-    padding-top: 67px;
-    padding-bottom: 33px;
+    padding-top: 66px;
+    padding-bottom: 72px;
   }
 
   .page-footer__logo {
+    padding-bottom: 8px;
     padding-right: 26px;
   }
 
-  .page-footer__copyright {
-    padding-left: 15px;
+  .page-footer__icon {
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
   }
 
   .page-footer__note {

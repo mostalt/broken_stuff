@@ -1,53 +1,59 @@
 .social {
   display: flex;
   justify-content: center;
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 }
 
 .social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 45px;
   height: 45px;
   margin-right: 12px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border: 3px solid @secondary-color;
-  opacity: 0.1;
+  border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
-
-  &--tw {
-    background-image: url("../img/icon-twitter.svg");
-  }
-
-  &--fb {
-    background-image: url("../img/icon-facebook.svg");
-  }
 
   &--yt {
     margin-right: 0;
-    background-image: url("../img/icon-youtube.svg");
+  }
+
+  &--yt .social__icon {
+    margin-right: 0;
+    padding-left: 5px;
   }
 
   &:hover {
-    opacity: 1;
+    border: 3px solid @secondary-color;
+    outline: none;
   }
 
   &:focus {
-    opacity: 1;
+    border: 3px solid @secondary-color;
     outline: none;
   }
 
   &:active {
-    opacity: 0.1;
+    border: 3px solid rgba(40, 54, 69, 0.1);
     outline: none;
   }
+
+  &:active .social__icon {
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+.social__icon {
+  fill: @main-color;
 }
 
 /*--TABLET--*/
 
 @media (min-width: @tablet-width) {
   .social {
-    padding-top: 6px;
+    margin-top: 9px;
+    margin-bottom: 0;
   }
 }
 
@@ -55,6 +61,6 @@
 
 @media (min-width: @desktop-width) {
   .social {
-    padding-top: 7px;
+    //padding-top: 7px;
   }
 }

@@ -66,6 +66,7 @@ input[type="radio"]:focus + .price__label {
   width: 837px;
   text-transform: uppercase;
   border-collapse: collapse;
+  transition: transform 0.5s ease;
 }
 
 .price__toggle--1:checked ~ .price__list {
@@ -150,16 +151,18 @@ input[type="radio"]:focus + .price__label {
   border: 2px solid #e5e5e5;
 
   &--yes {
-    background-image: url("../img/icon-yes.svg");
+    background-image: url("../img/icon-yes-table.svg");
     background-position: 225px 18px;
     background-repeat: no-repeat;
     background-size: 40px 23px;
+    //background-size: 22px 17px;
   }
 
   &--no {
     background-image: url("../img/icon-no.svg");
     background-position: 231px 15px;
     background-repeat: no-repeat;
+    //background-size: 27px 27px;
   }
 
   &--mobile-hidden {

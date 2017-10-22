@@ -14,9 +14,12 @@ function init () {
     new ymaps.control.ZoomControl()
   );
 
-  var myPlacemark = new  ymaps.Placemark([59.938649906262164,30.323049135581975]);
+  var myPlacemark = new  ymaps.Placemark(
+    [59.938649906262164,30.323049135581975], {
+      hintContent: 'Большая!',
+      balloonContent: 'Столица России'
+    });
 
   myMap.geoObjects.add(myPlacemark),
   myMap.controls.add('ZoomControl');
-
 }

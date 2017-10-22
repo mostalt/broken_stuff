@@ -19,6 +19,7 @@
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-webp": "^2.3.0",
+    "postcss-object-fit-images": "^1.1.2",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.0",
     "stylelint": "8.1.x",
@@ -28,8 +29,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint 'less/**/*.less' --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp style",
-    "start": "gulp serve"
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "browserslist": [
     "last 2 versions",
@@ -46,5 +47,6 @@
   ],
   "engines": {
     "node": "8.2"
-  }
+  },
+  "dependencies": {}
 }

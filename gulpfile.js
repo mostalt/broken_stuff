@@ -24,13 +24,13 @@ gulp.task("style", function() {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      require("postcss-object-fit-images")
     ]))
-    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
-    .pipe(server.stream());
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream())
 });
 
 // IMAGES
@@ -42,7 +42,7 @@ gulp.task("images", function () {
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
  ]))
- .pipe(gulp.dest("build/img"));
+ .pipe(gulp.dest("build/img"))
 });
 
 // WEBP
@@ -50,30 +50,29 @@ gulp.task("images", function () {
 gulp.task("webp", function () {
   return gulp.src("img/**/*.{png,jpg}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("build/img"))
 });
 
 // SVG SPRITE
 
 gulp.task("sprite", function () {
   return gulp.src("img/*.svg")
-  .pipe(svgmin())
   .pipe(svgstore({
     inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("build/img"))
 });
 
 // JS
 
 gulp.task("js", function() {
-  return gulp.src(["build/js/*.js")
+  return gulp.src(["js/*.js", "!js/*.min.js"])
     .pipe(uglify())
     .pipe(rename({
       suffix: ".min"
     }))
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("build/js"))
 });
 
 // HTML
@@ -83,8 +82,8 @@ gulp.task("html", function () {
   .pipe(posthtml([
     include()
   ]))
-  .pipe(gulp.dest("build"));
-  .pipe(server.stream());
+  .pipe(server.stream())
+  .pipe(gulp.dest("build"))
 });
 
 // CLEAN BUILD
@@ -103,7 +102,7 @@ gulp.task("copy", function () {
     ], {
       base: "."
     })
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("build"))
 });
 
 // BUILD
@@ -119,8 +118,9 @@ gulp.task("build", function (done) {
     "sprite",
     "html",
     done
-  );
+  )
 });
+
 
 // LIVE SERVER
 
@@ -134,6 +134,6 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("less/**/*.less", ["style"]).on("change", server.reload);
-  gulp.watch("*.html"), ["html"].on("change", server.reload);
+  gulp.watch("*.html", ["html"]).on("change", server.reload);
   gulp.watch("js/*.js", ["js"]).on("change", server.reload);
 });

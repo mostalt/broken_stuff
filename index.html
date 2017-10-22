@@ -5,7 +5,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
     <script>
       document.createElement("picture");
     </script>
@@ -15,6 +17,10 @@
   </head>
   <body>
 
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <!--NAVIGATION-->
 
     <header class="page-header  page-header--index">
@@ -23,13 +29,13 @@
           <h1 class="page-header__title  visually-hidden">Pink</h1>
           <a class="page-header__logo">
             <svg class="page-header__icon  page-header__icon--mobile" width="74.426" height="22.859" title="Логотип Pink">
-              <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+              <use xlink:href="#logo-pink-white-mobile"></use>
             </svg>
             <svg class="page-header__icon  page-header__icon--tablet" width="146.3" height="40.375" title="Логотип Pink">
-              <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+              <use xlink:href="#logo-pink-white-tablet"></use>
             </svg>
             <svg class="page-header__icon  page-header__icon--desktop" width="146.3" height="40.375" title="Логотип Pink">
-              <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+              <use xlink:href="#logo-pink-white-desktop"></use>
             </svg>
           </a>
           <nav class="main-nav  main-nav--opened  main-nav--nojs">
@@ -238,8 +244,7 @@
             </li>
           </ul>
         </div>
-        <div class="contacts__map">
-          <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1153.9413774477023!2d30.3207760384427!3d59.93631663233066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1506092349588 "width="320" height="219" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+        <div class="contacts__map" id="map">
         </div>
       </section>
     </main>
@@ -249,29 +254,29 @@
     <footer class="page-footer  page-footer--index">
       <a class="page-footer__logo">
         <svg class="page-footer__icon  page-footer__icon--mobile" width="146.3" height="40.375" title="Логотип Pink">
-          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          <use xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
         <svg class="page-footer__icon  page-footer__icon--desktop" width="146.3" height="40.375" title="Логотип Pink">
-          <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+          <use xlink:href="#logo-pink-blue-desktop"></use>
         </svg>
       </a>
       <div class="page-footer__social  social">
         <a class="social__item  social__item--tw" href="https://twitter.com/htmlacademy_ru" title="Twitter">
           <span class="visually-hidden">Twitter></span>
           <svg class="social__icon" width="17.5" height="14.663">
-            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
         <a class="social__item  social__item--fb" href="https://www.facebook.com/htmlacademy" title="Facebook">
           <span class="visually-hidden">Facebook</span>
           <svg class="social__icon" width="8.673" height="18.944">
-            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
         <a class="social__item  social__item--yt" href="https://www.youtube.com/htmlacademyru" title="Youtube">
           <span class="visually-hidden">Youtube</span>
           <svg class="social__icon" width="14.64" height="13.96">
-            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            <use xlink:href="#icon-youtube"></use>
           </svg>
         </a>
       </div>
@@ -280,32 +285,12 @@
           <span class="page-footer__note">Разработано</span>
           <span class="visually-hidden">HTML Academy</span>
           <svg class="page-footer__academy" width="26.943" height="34.09">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </footer>
-    <script>
-  var navMain = document.querySelector(".main-nav");
-  var menuMain = document.querySelector(".page-header__menu");
-  var navToggle = document.querySelector(".main-nav__toggle");
-
-  navMain.classList.remove("main-nav--nojs");
-
-  navToggle.addEventListener("click", function() {
-    if (navMain.classList.contains("main-nav--closed")) {
-      navMain.classList.remove("main-nav--closed");
-      navMain.classList.add("main-nav--opened");
-      menuMain.classList.remove("page-header__menu--closed");
-      menuMain.classList.add("page-header__menu--opened");
-    } else {
-      navMain.classList.add("main-nav--closed");
-      navMain.classList.remove("main-nav--opened");
-      menuMain.classList.add("page-header__menu--closed");
-      menuMain.classList.remove("page-header__menu--opened");
-    }
-  });
-    </script>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/map.min.js"></script>
   </body>
 </html>
